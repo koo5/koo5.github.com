@@ -4,8 +4,57 @@
   <head>
     <title>Canvas tutorial</title>
     <script type="text/javascript">
+
+var rgb = 0;
+var w = 33,h = 33;
+
+function ccc(){
+	var b;
+	a = this.getContext('2d').fillStyle;
+//	alert(a);
+	if (a == '#cc0000')
+		b = '#00ff00';
+	else if (a == '#00ff00')
+		b = '#0000bb';
+	else if (a == '#0000bb')
+		b = '#000000';
+	else if (a == '#000000')
+		b = '#cc0000';
+	else
+		b = '#cc0000';
+  	this.getContext('2d').fillStyle=b;
+  	this.getContext('2d').fillRect(0,0,w,h);
+
+}
     
-    
+function generate_table() {
+  var body = document.getElementsByTagName("body")[0];
+  var tbl     = document.createElement("table");
+  var tblBody = document.createElement("tbody");
+  for (var j = 0; j < 31; j++) {
+    var row = document.createElement("tr");
+    for (var i = 0; i < 31; i++) {
+      var cell = document.createElement("td");
+      cell.height = h;
+      cell.width = w;
+      canvas = document.createElement("canvas");
+      canvas.height = h;
+      canvas.width = w;
+      canvas.fillStyle='#000000';
+      cell.appendChild(canvas);
+      if ((j == 15)&&(i == 15))
+        rgb = canvas.getContext('2d');
+      else
+     	canvas.onclick = ccc;
+      row.appendChild(cell);
+    }
+    tblBody.appendChild(row);
+  }
+  tbl.appendChild(tblBody);
+  body.appendChild(tbl);
+  tbl.setAttribute("border", "0");
+}
+
      
     var  cycle_count = 1;
     var LED_pwm = new Array(255,0,0); 
@@ -53,8 +102,7 @@
 
 
 
-  	var rgb = document.getElementById('rgb');
-  	rgb = rgb.getContext('2d');
+//  	var rgb = document.getElementById('rgb');
   	//rgb.fillStyle=LED_pwm;
   	rgb.fillStyle='rgb(' + LED_pwm[0]+','+LED_pwm[1]+','+LED_pwm[2]+')';
   	rgb.fillRect(0,0,100,100);///////
@@ -66,10 +114,8 @@
 
     </script>
     <style type="text/css">
-      canvas { border: 7px solid orange; }
     </style>
   </head>
-  <body onload="window.setInterval(draw, 1);" background="noise.gif">
-<canvas id="rgb" width='100' height='100'>
+  <body onload="generate_table();window.setInterval(draw, 1);" background="noise.gif">
   </body>
 </html>
