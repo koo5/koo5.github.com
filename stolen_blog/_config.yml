@@ -1,6 +1,6 @@
 defaults:
     scope:
-        path: ""
+        path: "stolen_blog"
     values:
         layout: "default"
-    baseurl: "Gremble09.github.io"
+    baseurl: "koo5.github.io"
