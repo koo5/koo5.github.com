@@ -74,8 +74,8 @@ footer a:link{
 
 nav {
     margin-top:15px;
-    margin-left:35px;
-    margin-right:195px;
+    margin-left:40px;
+    margin-right:200px;
     background: white;//linear-gradient(#209930,#00520B);
 }
 nav ul{
@@ -86,8 +86,8 @@ nav li {
     display: inline-block;
     list-style: none;
     padding: 1px 10px;
-    padding-top:16px;
-    padding-bottom:16px;
+    padding-top:3px;
+    padding-bottom:3px;
     margin-top: 0px;
     margin-bottom:0px;
 }
