@@ -1,6 +1,0 @@
-defaults:
-    scope:
-        path: "stolen_blog"
-    values:
-        layout: "default"
-    baseurl: "koo5.github.io"
