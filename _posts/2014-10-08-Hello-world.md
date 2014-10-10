@@ -10,3 +10,4 @@ After some effort I think I have finally gotten this blogging thing set up.  I'v
 
 This site is set up on a Jekyll base hosted on GitHub.  Thanks to Jekyll I can write posts using Markdown, that then gets rendered into HTML.  With some clever tricks from the liquid templating engine, I can then add all the preamble to the posts so that CSS and all the other pretty things get added. Added functionality from the MathJax JavaScript library, I can even render mathematics.  Hopefully this blog will prove interesting and educational to others as well.
 
+
